@@ -1,4 +1,4 @@
-[![Python application test with Github Actions](https://github.com/lx2gh/Udacity_Project2/workflows/Python%application%test%with%Github%Actions/badge.svg)](https://github.com/lx2gh/Udacity_Project2/actions)
+[![Actions status](https://github.com/lx2gh/Udacity_Project2/workflows/Python%20application%20test%20with%20Github%20Actions/badge.svg)](https://github.com/lx2gh/Udacity_Project2/actions)
 
 # Overview
 
