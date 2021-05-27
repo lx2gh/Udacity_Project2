@@ -90,7 +90,10 @@ Expected output:<br>
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+To further enhance this project I suggest the following:
+* Replace Landigpage with some kind of API description
+* Feature image recognition to further improve accuracy of model
+* Introduce dev and staging branches to make development more robust and stable
 
 ## Demo 
 
