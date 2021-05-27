@@ -77,8 +77,14 @@ Expected output:<br>
  
 * Now you can go to the url of your deployed app service and see the following:
 ![Landingpage](doc/Azure_App_Service.JPG "Landingpage")
+ 
+* You can take a look at the logs by typing:
+ ```bash
+ az webapp log tail
+ ```
+ Expected output:<br>
+ ![logs](doc/log.JPG "logs")
 
-* Output of streamed log files from deployed application
 
 > 
 
