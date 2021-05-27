@@ -87,6 +87,17 @@ Expected output:<br>
 
 
 > 
+ 
+## Load test
+ 
+To conduct a load test in Azure Cloud Shell against the Flask Web Service use the locustfile.y with the following command (don't forget to replace <app-name>:<br>
+```bash
+ locust -f locustfile.py --web-port 5005 -u 100 --host https://<app-name>.azurewebsites.net --headless
+```
+Output should look somewhat like this: 
+![image](https://user-images.githubusercontent.com/73993628/119826128-fdd92c80-bef7-11eb-9003-037d5cdd4f4d.png)
+
+
 
 ## Enhancements
 
