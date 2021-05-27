@@ -2,49 +2,109 @@
 
 # Overview
 
-<TODO: complete this with an overview of your project>
+This is a Machine Learning Microservice which features a REST-API to predict house prices. It is trained with the Boston housing prices dataset, is implemented im Python and runs on an Azure App Service.
+This project makes use of Continuous Integration (CI) via Github Actions and Continious Dellivery (CD) via azure pipelines
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+The project spreadsheet can be found under [/plan/spreadsheet.xlsx](/plan/spreadsheet.xlsx) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
 
 ## Instructions
 
-<TODO:  
-* Architectural Diagram (Shows how key parts of the system work)>
+Architectural Diagram of project: 
+![architecture](doc/architecture.jpg "Architecture of CI/CD")
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* Get an Azure account and log into [azure portal](https://portal.azure.com)
 
-* Project running on Azure App Service
+* Open cloud shell
 
-* Project cloned into Azure Cloud Shell
-
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
-
-* Output of a test run
-
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
-* Successful prediction from deployed flask app in Azure Cloud Shell.  [Use this file as a template for the deployed prediction](https://github.com/udacity/nd082-Azure-Cloud-DevOps-Starter-Code/blob/master/C2-AgileDevelopmentwithAzure/project/starter_files/flask-sklearn/make_predict_azure_app.sh).
-The output should look similar to this:
+* Generate ssh key by using following command:
 
 ```bash
-udacity@Azure:~$ ./make_predict_azure_app.sh
-Port: 443
-{"prediction":[20.35373177134412]}
+user@Azure:~$ ssh-keygen -t rsa
 ```
 
-* Output of streamed log files from deployed application
+* Copy ssh key and add it to your github account 
+
+* Clone this repo into Azure Cloud Shell. Output should look like this:
+![clone](doc/Clone_2_Cloud_Shell.JPG "cloning repo")
+
+* Set up Python virtual environment by executing: 
+```bash
+make setup
+```
+* Activate virtual environment:
+```bash
+source ~/.udacity-devops/bin/activate
+```
+* Install requirements and test project setup:
+```bash
+make all
+```
+Expected output:
+![make all](doc/passing_all_tests.JPG "passing all tests")
+
+* To conduct a test run hosted in the Azure Cloud Shell type the following commands:
+```bash
+export FLASK_APP=app.py
+flask run
+```
+Expected output:<br>
+![test run](doc/test_run.JPG "test run")
+
+* Deploy to Azure App Service (make sure to replace <app-name> with an actual app name of your choice):
+```bash
+az webapp up -n <app-name>
+```
+
+* Now you can call the REST-API from your brand new app service to make a prediction:
+  * First modify file "./make_predict_azure_app.sh" by replacing the url of the app service with the one generated in the step before
+  * Then call ./make_predict_azure_app.sh:
+    ```bash
+    ./make_predict_azure_app.sh
+    ```
+Expected output:<br>
+![predict cloud shell](doc/successfull_prediction_in_azure_cloud_shell.JPG "prediction")
+ 
+* Now its time for setting up the Azure Pipeline:
+ * Go to [https://aex.dev.azure.com/](https://aex.dev.azure.com/) and create a new project
+ * Enter new project and go to Pipleines -> create new Pipeline
+ * Choose github. It will automatically detect the pipleine.yml file of this project and set everything up for you!
+[Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
+
+* When you choose to run the pipeline manually or everytime you check in new code, the pipeline will run automatically:<br>
+![CD](doc/successful_CD.JPG "CD")
+ 
+* Now you can go to the url of your deployed app service and see the following:
+![Landingpage](doc/Azure_App_Service.JPG "Landingpage")
+ 
+* You can take a look at the logs by typing:
+ ```bash
+ az webapp log tail
+ ```
+ Expected output:<br>
+ ![logs](doc/log.JPG "logs")
+
 
 > 
+ 
+## Load test
+ 
+To conduct a load test in Azure Cloud Shell against the Flask Web Service use the locustfile.y with the following command (don't forget to replace <app-name>:<br>
+```bash
+ locust -f locustfile.py --web-port 5005 -u 100 --host https://<app-name>.azurewebsites.net --headless
+```
+Output should look somewhat like this: 
+![image](https://user-images.githubusercontent.com/73993628/119826128-fdd92c80-bef7-11eb-9003-037d5cdd4f4d.png)
+
+
 
 ## Enhancements
 
-<TODO: A short description of how to improve the project in the future>
+To further enhance this project I suggest the following:
+* Replace Landigpage with some kind of API description
+* Feature image recognition to further improve accuracy of model
+* Introduce dev and staging branches to make development more robust and stable
 
 ## Demo 
 
