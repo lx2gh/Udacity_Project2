@@ -75,10 +75,8 @@ Expected output:<br>
 * When you choose to run the pipeline manually or everytime you check in new code, the pipeline will run automatically:<br>
 ![CD](doc/successful_CD.JPG "CD")
  
-* Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
-
-* Running Azure App Service from Azure Pipelines automatic deployment
-
+* Now you can go to the url of your deployed app service and see the following:
+![Landingpage](doc/Azure_App_Service.JPG "Landingpage")
 
 * Output of streamed log files from deployed application
 
