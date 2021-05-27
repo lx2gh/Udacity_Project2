@@ -63,9 +63,18 @@ az webapp up -n <app-name>
     ```bash
     ./make_predict_azure_app.sh
     ```
-Expected output:
+Expected output:<br>
 ![predict cloud shell](doc/successfull_prediction_in_azure_cloud_shell.JPG "prediction")
+ 
+* Now its time for setting up the Azure Pipeline:
+ * Go to [https://aex.dev.azure.com/](https://aex.dev.azure.com/) and create a new project
+ * Enter new project and go to Pipleines -> create new Pipeline
+ * Choose github. It will automatically detect the pipleine.yml file of this project and set everything up for you!
+[Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
+* When you choose to run the pipeline manually or everytime you check in new code, the pipeline will run automatically:<br>
+![CD](doc/successful_CD.JPG "CD")
+ 
 * Successful deploy of the project in Azure Pipelines.  [Note the official documentation should be referred to and double checked as you setup CI/CD](https://docs.microsoft.com/en-us/azure/devops/pipelines/ecosystems/python-webapp?view=azure-devops).
 
 * Running Azure App Service from Azure Pipelines automatic deployment
