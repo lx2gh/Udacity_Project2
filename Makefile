@@ -14,4 +14,7 @@ lint:
 	#hadolint Dockerfile #uncomment to explore linting Dockerfiles
 	pylint --disable=R,C,W1203,W0702 app.py
 
+load:
+	locust -f locustfile.py --web-port 5005 -u 100 --host https://udacity-project-2.azurewebsites.net --headless
+
 all: install lint test
