@@ -21,10 +21,13 @@ Architectural Diagram of project:
 * Generate ssh key by using following command:
 
 ```bash
-user@azure:~$ ssh-keygen -t rsa
+user@Azure:~$ ssh-keygen -t rsa
 ```
 
-* Project cloned into Azure Cloud Shell
+* Copy ssh key and add it to your github account 
+
+* Clone this repo into Azure Cloud Shell. Output should look like this:
+![clone](doc/Clone_2_Cloud_Shell.JPG "cloning repo")
 
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
 
