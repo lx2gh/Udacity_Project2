@@ -14,9 +14,15 @@ The project spreadsheet can be found under [/plan/spreadsheet.xlsx](/plan/spread
 Architectural Diagram of project: 
 ![architecture](doc/architecture.jpg "Architecture of CI/CD")
 
-<TODO:  Instructions for running the Python project.  How could a user with no context run this project without asking you for any help.  Include screenshots with explicit steps to create that work. Be sure to at least include the following screenshots:
+* Get an Azure account and log into [azure portal](https://portal.azure.com)
 
-* Project running on Azure App Service
+* Open cloud shell
+
+* Generate ssh key by using following command:
+
+```bash
+user@azure:~$ ssh-keygen -t rsa
+```
 
 * Project cloned into Azure Cloud Shell
 
