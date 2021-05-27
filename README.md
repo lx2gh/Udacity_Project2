@@ -29,6 +29,21 @@ user@Azure:~$ ssh-keygen -t rsa
 * Clone this repo into Azure Cloud Shell. Output should look like this:
 ![clone](doc/Clone_2_Cloud_Shell.JPG "cloning repo")
 
+* Set up Python virtual environment by executing: 
+```bash
+make setup
+```
+* Activate virtual environment:
+```bash
+source ~/.udacity-devops/bin/activate
+```
+* Install requirements and test project setup:
+```bash
+make all
+```
+Expected output:
+![make all](doc/passing_all_tests.JPG "passing all tests")
+
 * Passing tests that are displayed after running the `make all` command from the `Makefile`
 
 * Output of a test run
