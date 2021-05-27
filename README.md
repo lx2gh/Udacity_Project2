@@ -44,7 +44,13 @@ make all
 Expected output:
 ![make all](doc/passing_all_tests.JPG "passing all tests")
 
-* Passing tests that are displayed after running the `make all` command from the `Makefile`
+* To conduct a test run hosted in the Azure Cloud Shell type the following commands:
+```bash
+export FLASK_APP=app.py
+flask run
+```
+Expected output:
+![test run](doc/test_run.JPG "test run")
 
 * Output of a test run
 
