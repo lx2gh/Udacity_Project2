@@ -2,13 +2,12 @@
 
 # Overview
 
-<TODO: complete this with an overview of your project>
+This is a Machine Learning Microservice which features a REST-API to predict house prices. It is trained with the Boston housing prices dataset, is implemented im Python and runs on an Azure App Service.
+This project makes use of Continuous Integration (CI) via Github Actions and Continious Dellivery (CD) via azure pipelines
 
 ## Project Plan
-<TODO: Project Plan
 
-* A link to a Trello board for the project
-* A link to a spreadsheet that includes the original and final project plan>
+The project spreadsheet can be found under [/plan/spreadsheet.xls](lx2gh/Udacity_Project2/blob/main/plan/spreadsheet.xls) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
 
 ## Instructions
 
