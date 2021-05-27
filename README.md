@@ -7,7 +7,7 @@ This project makes use of Continuous Integration (CI) via Github Actions and Con
 
 ## Project Plan
 
-The project spreadsheet can be found under [/plan/spreadsheet.xls](lx2gh/Udacity_Project2/blob/main/plan/spreadsheet.xls) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
+The project spreadsheet can be found under [/plan/spreadsheet.xlsx](lx2gh/Udacity_Project2/blob/main/plan/spreadsheet.xlsx) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
 
 ## Instructions
 
