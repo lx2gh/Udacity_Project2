@@ -49,7 +49,7 @@ Expected output:
 export FLASK_APP=app.py
 flask run
 ```
-Expected output:
+Expected output:<br>
 ![test run](doc/test_run.JPG "test run")
 
 * Output of a test run
