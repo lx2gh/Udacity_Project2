@@ -7,7 +7,7 @@ This project makes use of Continuous Integration (CI) via Github Actions and Con
 
 ## Project Plan
 
-The project spreadsheet can be found under [/plan/spreadsheet.xlsx](/plan/spreadsheet.xlsx) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
+The project spreadsheet can be found under [/plan/spreadsheet.xlsx](/plan/spreadsheet.xlsx) (you have to download it, as github doesn't feature xlsx preview) and here is a link to the [Trello Board](https://trello.com/b/yWGD7Lut/mlmicroservice)
 
 ## Instructions
 
