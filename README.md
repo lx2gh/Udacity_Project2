@@ -78,8 +78,8 @@ Expected output:<br>
 * Now you can go to the url of your deployed app service and see the following:
 ![Landingpage](doc/Azure_App_Service.JPG "Landingpage")
  
-* At the Azure portal you can now see your app service and the deployments via Azure Pipelines:<br>
-![deployed](doc/deployed.JPG "deployed")
+* At the Azure portal you can now see your app service:<br>
+![deployed](doc/depl.JPG "deployed")
  
 * You can take a look at the logs by typing:
  ```bash
