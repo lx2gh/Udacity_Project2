@@ -78,6 +78,9 @@ Expected output:<br>
 * Now you can go to the url of your deployed app service and see the following:
 ![Landingpage](doc/Azure_App_Service.JPG "Landingpage")
  
+* At the Azure portal you can now see your app service and the deployments via Azure Pipelines:<br>
+![deployed](doc/deployed.JPG "deployed")
+ 
 * You can take a look at the logs by typing:
  ```bash
  az webapp log tail
@@ -92,10 +95,10 @@ Expected output:<br>
  
 To conduct a load test in Azure Cloud Shell against the Flask Web Service use the locustfile.y with the following command (don't forget to replace <app-name>:<br>
 ```bash
- locust -f locustfile.py --web-port 5005 -u 100 --host https://<app-name>.azurewebsites.net --headless
+ locust -f locustfile.py --web-port 5005 -u 100 --host https://<app-name>.azurewebsites.net
 ```
 Output should look somewhat like this: 
-![image](https://user-images.githubusercontent.com/73993628/119826128-fdd92c80-bef7-11eb-9003-037d5cdd4f4d.png)
+![image](doc/load.JPG)
 
 
 
